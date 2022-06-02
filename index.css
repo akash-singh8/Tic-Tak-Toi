@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.5px;
+    background-color: rgb(56, 6, 71);
+    color: white;
+    height: 50px;
+}
+h1{
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    height: calc(100vh - 130px);
+}
+
+.tictak{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    margin-right: 45px;
+}
+
+.box{
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    transition: background-color 0.25s;
+    user-select : none;
+}
+.box:hover{
+    background-color: rgb(236, 234, 234);
+    cursor: pointer;
+}
+.box:active{
+    background-color: rgb(218, 216, 216);
+}
+.box::selection{
+    background: transparent;
+}
+
+.bottom{
+    border-bottom: none;
+}
+.right{
+    border-right: none;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    font-size: 2rem;
+    width: 20vw;
+}
+
+#reset{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 6px 18px;
+    border: 2px solid rgb(120, 126, 129);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.2s, color 0.2s, opacity 0.2s;
+}
+#reset:hover{
+    background-color: rgb(120, 126, 129);
+    color: white;
+}   
+#reset:active{
+    opacity: 0.8;
+}
+
+#info{
+    font-size: 2rem;
+    margin: 20px 20px;
+    text-align: center;
+}
+
+#gif, #drawGif{
+    width: 100%;
+    display: none;
+    margin: 20px 0;
+}
+
+sup{ 
+    font-size: 1rem;
+}
+
+@media (max-width : 1280px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tictak{
+        grid-template-columns: repeat(3, 25vw);
+        grid-template-rows: repeat(3, 25vw);
+        margin: 20px 0;
+    }
+
+    .details{
+        width: 70vw;
+    }
+
+    #info{
+        margin: 45px 0;
+    }
+
+    #reset{
+        padding: 12px 30px;
+        font-size: 1.5rem;
+    }
+}
+
+nav{
+    background-color: rgb(56, 6, 71);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    letter-spacing: 1.5px;
+    word-spacing: 3.5px;
+}
+
+.name{
+    font-weight: bold;
+    cursor: pointer;
+    color: aqua;
+}
+
+.name:hover{
+    text-shadow: 1px 1px 4px rgb(14, 95, 128);
+}
