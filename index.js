@@ -30,10 +30,6 @@ for (let i=0; i<9; i++){
 }
 
 function checkWinner(row, col){
-    if (count == 9){
-        info.innerHTML = "Match Draws!";
-        document.querySelector("#drawGif").style.display = "inline-block";
-    }
     let curr = boxArr[row][col];
     // checking for row and column
     let checkWinRow = true, checkWinCol = true;
@@ -68,6 +64,10 @@ function checkWinner(row, col){
 
             if (leftDiag && rightDiag) displayWinner(curr);
         }
+    }
+    if (count == 9 && !wins){
+        info.innerHTML = "Match Draws!";
+        document.querySelector("#drawGif").style.display = "inline-block";
     }
 }
 
